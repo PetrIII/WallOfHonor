@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3A52B0A-2718-4FDF-86D9-252C0F4FC609}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WallOfHonor</RootNamespace>
+    <AssemblyName>WallOfHonor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\WallOfHonorFeature\WallOfHonorFeature.EventReceiver.cs">
+      <DependentUpon>WallOfHonorFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WOHWebPart\WOHWebPart.ascx.cs">
+      <DependentUpon>WOHWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOHWebPart\WOHWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WOHWebPart.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Achievement\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dbc8845f-e26e-4497-a220-2d0f31a08e3c}</SharePointProjectItemId>
+    </None>
+    <None Include="Department\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f01ce579-1251-418c-96b9-df0ff53e6e01}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\WallOfHonorFeature\WallOfHonorFeature.feature">
+      <FeatureId>{838b0bd0-4543-4b0a-a346-8d838a67ce65}</FeatureId>
+    </None>
+    <None Include="FIO\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{64749f9a-8252-4e49-a597-b1f69f1aae19}</SharePointProjectItemId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{74a7da01-1eec-44f5-9721-9ef50925fc32}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e627ea98-53ff-4cfd-a7cc-17154f5a6992}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\basic\assets\fonts\icons.eot" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\basic\assets\fonts\icons.ttf" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\basic\assets\fonts\icons.woff" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\default\assets\fonts\icons.eot" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\default\assets\fonts\icons.ttf" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\default\assets\fonts\icons.woff" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\default\assets\fonts\icons.woff2" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\github\assets\fonts\octicons-local.ttf" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\github\assets\fonts\octicons.ttf" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\dist\themes\github\assets\fonts\octicons.woff" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\collections\breadcrumb.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\collections\form.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\collections\grid.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\collections\menu.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\collections\message.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\collections\table.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\button.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\container.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\divider.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\flag.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\header.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\icon.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\image.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\input.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\label.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\list.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\loader.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\rail.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\reveal.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\segment.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\elements\step.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\globals\reset.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\globals\site.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\accordion.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\checkbox.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\dimmer.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\dropdown.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\embed.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\modal.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\nag.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\popup.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\progress.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\rating.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\search.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\shape.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\sidebar.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\sticky.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\tab.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\transition.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\views\ad.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\views\card.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\views\comment.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\views\feed.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\views\item.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\definitions\views\statistic.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\semantic.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\breadcrumb.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\breadcrumb.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\form.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\form.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\grid.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\grid.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\menu.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\menu.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\message.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\message.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\table.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\collections\table.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\container.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\container.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\divider.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\divider.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\flag.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\flag.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\header.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\header.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\icon.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\icon.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\image.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\image.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\input.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\input.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\label.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\label.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\list.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\list.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\loader.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\loader.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\rail.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\rail.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\reveal.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\reveal.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\segment.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\segment.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\step.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\elements\step.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\globals\reset.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\globals\reset.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\globals\site.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\globals\site.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\accordion.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\accordion.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\chatroom.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\chatroom.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\checkbox.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\checkbox.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\dimmer.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\dimmer.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\dropdown.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\dropdown.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\embed.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\embed.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\modal.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\modal.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\nag.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\nag.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\popup.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\popup.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\progress.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\progress.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\rating.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\rating.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\search.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\search.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\shape.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\shape.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\sidebar.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\sidebar.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\sticky.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\sticky.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\tab.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\tab.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\transition.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\modules\transition.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\ad.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\ad.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\card.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\card.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\comment.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\comment.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\feed.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\feed.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\item.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\item.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\statistic.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\site\views\statistic.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\theme.config" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\theme.less" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\amazon\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\amazon\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\amazon\globals\site.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\assets\fonts\icons.eot" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\assets\fonts\icons.ttf" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\assets\fonts\icons.woff" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\collections\table.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\collections\table.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\elements\icon.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\elements\icon.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\elements\step.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\elements\step.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\globals\reset.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\globals\reset.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\modules\progress.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\modules\progress.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\views\card.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\views\card.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\bookish\elements\header.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\bookish\elements\header.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\bootstrap3\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\bootstrap3\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\collections\form.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\collections\form.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\collections\menu.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\collections\menu.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\elements\header.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\elements\header.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\modules\accordion.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\modules\accordion.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\views\comment.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\chubby\views\comment.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\collections\table.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\collections\table.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\elements\header.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\elements\header.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\modules\progress.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\modules\progress.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\views\card.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\classic\views\card.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\colored\modules\checkbox.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\colored\modules\checkbox.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\assets\fonts\icons.eot" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\assets\fonts\icons.ttf" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\assets\fonts\icons.woff" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\assets\fonts\icons.woff2" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\breadcrumb.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\breadcrumb.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\form.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\form.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\grid.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\grid.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\menu.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\menu.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\message.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\message.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\table.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\collections\table.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\container.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\container.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\divider.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\divider.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\flag.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\flag.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\header.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\header.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\icon.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\icon.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\image.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\image.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\input.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\input.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\label.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\label.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\list.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\list.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\loader.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\loader.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\rail.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\rail.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\reveal.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\reveal.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\segment.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\segment.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\step.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\elements\step.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\globals\reset.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\globals\reset.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\globals\site.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\globals\site.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\accordion.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\accordion.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\chatroom.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\chatroom.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\checkbox.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\checkbox.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\dimmer.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\dimmer.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\dropdown.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\dropdown.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\embed.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\embed.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\modal.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\modal.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\nag.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\nag.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\popup.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\popup.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\progress.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\progress.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\rating.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\rating.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\search.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\search.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\shape.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\shape.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\sidebar.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\sidebar.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\sticky.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\sticky.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\tab.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\tab.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\transition.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\modules\transition.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\ad.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\ad.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\card.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\card.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\comment.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\comment.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\feed.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\feed.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\item.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\item.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\statistic.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\views\statistic.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\duo\elements\loader.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\duo\elements\loader.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\fixed-width\collections\grid.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\fixed-width\collections\grid.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\fixed-width\modules\modal.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\fixed-width\modules\modal.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\flat\collections\form.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\flat\collections\form.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\flat\globals\site.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\flat\globals\site.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\assets\fonts\octicons-local.ttf" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\assets\fonts\octicons.ttf" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\assets\fonts\octicons.woff" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\breadcrumb.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\form.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\form.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\grid.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\menu.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\menu.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\message.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\message.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\collections\table.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\header.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\icon.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\icon.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\image.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\input.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\input.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\label.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\label.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\segment.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\segment.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\step.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\elements\step.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\globals\site.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\modules\dropdown.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\modules\dropdown.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\modules\popup.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\gmail\collections\message.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\gmail\collections\message.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\instagram\views\card.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\instagram\views\card.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\collections\menu.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\collections\menu.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\elements\header.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\elements\header.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\globals\site.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\globals\site.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\modules\dropdown.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\modules\dropdown.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\modules\modal.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\material\modules\modal.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\pulsar\elements\loader.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\pulsar\elements\loader.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\raised\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\raised\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\resetcss\globals\reset.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\resetcss\globals\reset.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\round\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\round\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\rtl\globals\site.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\rtl\globals\site.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\striped\modules\progress.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\striped\modules\progress.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\timeline\views\feed.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\timeline\views\feed.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\twitter\elements\button.overrides" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\src\themes\twitter\elements\button.variables" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\tasks\collections\README.md" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\templates\bower.json" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\templates\composer.json" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\templates\package.json" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\templates\README.md" />
+    <None Include="Layouts\WallOfHonor\Source\semantic\tasks\README.md" />
+    <None Include="Nomination\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fe532abe-e60b-4641-9392-bff30a3110a5}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{430b8075-1568-436d-9411-5e50f8639ef8}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Position\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{eee289d9-c4ec-4338-a081-d2c85f7fea37}</SharePointProjectItemId>
+    </None>
+    <None Include="WallOfHonorList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f72319ba-fe58-4cfa-8ff2-2cf124baa3da}</SharePointProjectItemId>
+    </None>
+    <None Include="WOHContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5b989fd2-895d-4ea8-9435-fa3d752e8379}</SharePointProjectItemId>
+    </None>
+    <None Include="WOHWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cf44d067-8834-4c30-8dde-1616a04f9203}</SharePointProjectItemId>
+    </None>
+    <None Include="WOHWebPart\WOHWebPart.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\WallOfHonor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Achievement\Elements.xml" />
+    <Content Include="Department\Elements.xml" />
+    <Content Include="Features\WallOfHonorFeature\WallOfHonorFeature.Template.xml">
+      <DependentUpon>WallOfHonorFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="FIO\Elements.xml" />
+    <Content Include="Layouts\WallOfHonor\Source\css\bootstrap.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\css\dialogStyle.css" />
+    <Content Include="Layouts\WallOfHonor\Source\css\fileinput.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\css\main.css" />
+    <Content Include="Layouts\WallOfHonor\Source\css\nailthumb.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\css\tooltipster.css" />
+    <Content Include="Layouts\WallOfHonor\Source\img\additemuser.png" />
+    <Content Include="Layouts\WallOfHonor\Source\img\edit.png" />
+    <Content Include="Layouts\WallOfHonor\Source\img\loading-sm.gif" />
+    <Content Include="Layouts\WallOfHonor\Source\img\loading.gif" />
+    <Content Include="Layouts\WallOfHonor\Source\img\noborder.png" />
+    <Content Include="Layouts\WallOfHonor\Source\img\photo_test\worker1_b.jpg" />
+    <Content Include="Layouts\WallOfHonor\Source\img\photo_test\worker2_b.jpg" />
+    <Content Include="Layouts\WallOfHonor\Source\img\photo_test\worker3_b.jpg" />
+    <Content Include="Layouts\WallOfHonor\Source\img\photo_test\worker4_b.jpg" />
+    <Content Include="Layouts\WallOfHonor\Source\img\ramka.jpg" />
+    <Content Include="Layouts\WallOfHonor\Source\img\ramka2.jpg" />
+    <Content Include="Layouts\WallOfHonor\Source\img\recycle_bin.png" />
+    <Content Include="Layouts\WallOfHonor\Source\js\bootstrap.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\js\dialog.js" />
+    <Content Include="Layouts\WallOfHonor\Source\js\fileinput.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\js\jquery-1.11.3.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\js\nailthumb.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\js\main.js" />
+    <Content Include="Layouts\WallOfHonor\Source\js\tooltipster.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\accordion.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\accordion.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\accordion.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\accordion.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\ad.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\ad.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\api.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\api.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\breadcrumb.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\breadcrumb.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\button.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\button.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\card.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\card.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\checkbox.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\checkbox.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\checkbox.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\checkbox.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\comment.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\comment.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\container.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\container.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\dimmer.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\dimmer.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\dimmer.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\dimmer.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\divider.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\divider.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\dropdown.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\dropdown.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\dropdown.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\dropdown.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\embed.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\embed.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\embed.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\embed.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\feed.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\feed.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\flag.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\flag.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\form.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\form.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\form.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\form.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\grid.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\grid.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\header.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\header.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\icon.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\icon.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\image.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\image.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\input.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\input.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\item.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\item.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\label.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\label.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\list.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\list.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\loader.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\loader.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\menu.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\menu.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\message.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\message.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\modal.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\modal.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\modal.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\modal.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\nag.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\nag.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\nag.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\nag.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\popup.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\popup.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\popup.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\popup.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\progress.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\progress.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\progress.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\progress.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\rail.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\rail.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\rating.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\rating.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\rating.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\rating.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\reset.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\reset.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\reveal.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\reveal.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\search.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\search.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\search.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\search.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\segment.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\segment.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\shape.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\shape.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\shape.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\shape.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\sidebar.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\sidebar.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\sidebar.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\sidebar.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\site.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\site.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\site.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\site.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\state.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\state.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\statistic.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\statistic.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\step.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\step.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\sticky.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\sticky.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\sticky.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\sticky.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\tab.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\tab.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\tab.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\tab.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\table.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\table.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\transition.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\transition.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\transition.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\transition.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\visibility.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\components\visibility.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\semantic.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\semantic.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\semantic.min.css" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\semantic.min.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\themes\basic\assets\fonts\icons.svg" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\themes\default\assets\fonts\icons.svg" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\themes\default\assets\images\flags.png" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\dist\themes\github\assets\fonts\octicons.svg" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\gulpfile.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\behaviors\api.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\behaviors\colorize.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\behaviors\form.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\behaviors\state.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\behaviors\visibility.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\behaviors\visit.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\globals\site.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\accordion.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\checkbox.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\dimmer.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\dropdown.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\embed.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\modal.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\nag.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\popup.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\progress.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\rating.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\search.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\shape.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\sidebar.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\sticky.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\tab.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\definitions\modules\transition.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\themes\basic\assets\fonts\icons.svg" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\assets\fonts\icons.svg" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\themes\default\assets\images\flags.png" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\src\themes\github\assets\fonts\octicons.svg" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\components\create.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\components\init.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\components\update.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\distributions\create.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\distributions\init.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\distributions\update.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\publish.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\register.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\admin\release.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\build.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\build\assets.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\build\css.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\build\javascript.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\check-install.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\clean.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\collections\admin.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\collections\build.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\collections\internal.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\collections\rtl.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\github.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\oauth.example.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\release.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\templates\component-package.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\templates\css-package.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\admin\templates\less-package.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\defaults.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\docs.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\npm\gulpfile.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\project\config.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\project\install.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\project\release.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\tasks.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\config\user.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\docs\build.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\docs\metadata.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\docs\serve.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\install.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\rtl\build.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\rtl\watch.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\version.js" />
+    <Content Include="Layouts\WallOfHonor\Source\semantic\tasks\watch.js" />
+    <Content Include="Layouts\WallOfHonor\Source\touch\arrows.png" />
+    <Content Include="Layouts\WallOfHonor\Source\touch\preloader.gif" />
+    <Content Include="Layouts\WallOfHonor\Source\touch\touchTouch.css" />
+    <Content Include="Layouts\WallOfHonor\Source\touch\touchTouch.jquery.js" />
+    <Content Include="Nomination\Elements.xml" />
+    <Content Include="Position\Elements.xml" />
+    <Content Include="WallOfHonorList\Elements.xml" />
+    <Content Include="WallOfHonorList\Schema.xml" />
+    <Content Include="WOHContentType\Elements.xml" />
+    <Content Include="WOHWebPart\Elements.xml" />
+    <Content Include="WOHWebPart\WOHWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>WOHWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

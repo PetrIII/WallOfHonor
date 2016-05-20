@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="430b8075-1568-436d-9411-5e50f8639ef8" solutionId="430b8075-1568-436d-9411-5e50f8639ef8" resetWebServer="false" sharePointProductVersion="15.0" name="WallOfHonor" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="838b0bd0-4543-4b0a-a346-8d838a67ce65" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="74a7da01-1eec-44f5-9721-9ef50925fc32" />
+    <projectItemReference itemId="e627ea98-53ff-4cfd-a7cc-17154f5a6992" />
+  </projectItems>
+</package>

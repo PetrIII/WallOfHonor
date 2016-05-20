@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{7243dbb4-abb8-4cc0-bda3-328d2718d639}"
+       Name="Achievement"
+       DisplayName="Достижение"
+       Type="Text"
+       Required="FALSE"
+       Group="Wall of Honor">
+  </Field>
+</Elements>

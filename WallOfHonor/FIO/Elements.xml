@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{167ef4eb-62e3-4924-87da-fcdc126b69d5}"
+       Name="FIO"
+       DisplayName="FIO"
+       Type="Text"
+       Required="FALSE"
+       Group="Wall of Honor">
+  </Field>
+</Elements>

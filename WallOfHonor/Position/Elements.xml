@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{de353e74-6113-4771-8c5a-8f6c726fa32b}"
+       Name="Position"
+       DisplayName="Должность"
+       Type="Text"
+       Required="FALSE"
+       Group="Wall of Honor">
+  </Field>
+</Elements>

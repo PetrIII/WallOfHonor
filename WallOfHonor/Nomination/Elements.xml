@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{9fd2f948-b864-4c5e-b792-43df263bbeb1}"
+       Name="Nomination"
+       DisplayName="Номинация"
+       Type="Text"
+       Required="FALSE"
+       Group="Wall of Honor">
+  </Field>
+</Elements>

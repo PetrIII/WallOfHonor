@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited {
+    outline: none;
+    color: #1c4f64;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+.thumbs {
+    width: auto;
+    height: 500px;
+    overflow-y: auto;
+}
+
+    .thumbs a {
+        width: 121px;
+        height: 115px;
+        display: inline-block;
+        text-decoration: none;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+    }
+
+ .ramkaportret{
+   background-image:url("/_layouts/15/WallOfHonor/Source/img/ramka.jpg");    
+}
+
+.ramkanone{
+    background-image: none;
+    border: 5px solid gainsboro;
+    border-style: outset;
+    box-shadow: 3px 5px 6px black;
+}
+
+.ramkacommon{
+   position: relative;
+   background-repeat: no-repeat;
+   display:inline-block; 
+   background-size: cover;   
+}
+
+.ramkabig {
+   width: 200px;
+   height: 200px;
+   margin: 6px 6px 56px;
+}
+
+.ramkamedium {
+   width: 167px;
+   height: 167px;
+   margin: 6px 6px 46px;
+}
+
+.ramkasmall{
+   width: 100px;
+   height: 100px;
+   margin: 6px 6px 26px;    
+} 
+
+.ramkasmall{
+   width: 100px;
+   height: 100px;
+   margin: 6px 6px 26px;    
+}
+
+.ramkanone:after{
+    left: 1% !important;    
+}
+
+
+.ramkasmall:after{
+    bottom: -103px;
+    font-size: 9px;
+    width: 90px;
+    max-width: 90px;
+    height: 20px;    
+}
+
+.ramkamedium:after{
+    bottom: -170px;
+    font-size: 13px;
+    width: 150px;
+    max-width: 150px; 
+    height: 35px;   
+}
+
+.ramkabig:after{
+    bottom: -203px;
+    font-size: 13px;
+    width: 190px;
+    max-width: 200px;
+    height: 35px;    
+}
+
+.ramkacommon:after{
+	background-color: #F0E9D0;
+    border-radius: 7px;
+    left: 4%;
+    box-shadow: 3px 5px 6px black;
+    opacity: 0.6;
+    color: #00001a;
+    font-weight: bold;
+    content: attr(data-value);
+    display: inline-block;
+    font-family: "Calibri, Franklin Gothic Medium";
+    font-style: italic;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+    white-space: wrap;
+}
+
+.containersmall {
+    top: 35px;
+    left: 35px;
+}
+
+.containermedium {
+    top: 35px;
+    left: 35px;
+}
+
+.containerbig {
+    top: 35px;
+    left: 35px;
+}
+
+.tagsmall-ramkanone{
+   width: 90px;
+   top: 73px;
+   height: 17px; 
+}
+
+.tagsmall{
+   width: 71px;
+   top: 52px;
+   height: 17px; 
+}
+
+.tagmedium{
+   width: 121px;
+   top: 95px;
+   height: 20px; 
+}
+
+.tagmedium-ramkanone{
+   width: 157px;
+   top: 137px;
+   height: 20px; 
+}
+
+.tagbig{
+   width: 150px;
+   top: 120px;
+   height: 20px; 
+}
+
+.tagbig-ramkanone{
+   width: 190px;
+   top: 171px;
+   height: 20px; 
+}
+
+.tagcommon {
+   float: left;
+   position: absolute;
+   left: 0px;
+   z-index: 1;
+   opacity: 0.7;
+   background-color: white;
+   padding: 0px;
+   color: #FFFFFF;
+   font-weight: bold;
+}
+
+.square-thumb-small
+ {
+    width: 72px !important;
+    height: 69px !important;
+    position: absolute;
+    top: 16px;
+    left: 14px;
+ }
+ 
+ .square-thumb-small-ramkanone{
+    width: 90px !important;
+    height: 90px !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;     
+ }
+ 
+ .square-thumb-medium-ramkanone
+ {
+    width: 157px !important;
+    height: 157px !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+ }
+
+.square-thumb-medium
+ {
+    width: 121px !important;
+    height: 115px !important;
+    position: absolute;
+    top: 26px;
+    left: 23px;
+ }
+ 
+ .square-thumb-big
+ {
+    width: 146px !important;
+    height: 140px !important;
+    position: absolute;
+    top: 31px;
+    left: 27px;
+ }
+ 
+  .square-thumb-big-ramkanone
+ {
+    width: 190px !important;
+    height: 191px !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+ }
+
+@media screen and (max-width: 960px) {
+	.thumbs{
+		width:auto;
+	}
+}
+
+.tagcommon button {
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+    border: 0px;
+    vertical-align: top;
+    position: relative;
+    min-width: 20px;
+    margin-right: 1px;
+}
+
+.tagsmall-ramkanone button{
+    height: 17px;
+    left: 15%;    
+}
+
+.tagsmall button{
+    height: 17px;
+    left: 12%;    
+}
+
+.tagmedium button{
+    height: 20px;
+    left: 25%;    
+}
+
+.tagmedium-ramkanone button{
+    height: 20px;
+    left: 27%;    
+}
+
+.tagbig button{
+    height: 20px;
+    left: 30%;    
+}
+
+.tagbig-ramkanone button{
+    height: 20px;
+    left: 35%;    
+}
+
+.tagcommon button:hover{
+    outline: 1px solid black;
+    background-color: rgba(169,169,169,1);
+}
+
+.close-image-common img{
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;    
+}
+
+.close-image-small-ramkanone img {
+    height: 16px;  
+    width: 16px;
+}
+
+.close-image-small img {
+    height: 16px;  
+    width: 16px;
+}
+
+.close-image-medium-ramkanone img {
+    height: 18px;  
+    width: 18px;
+}
+
+.close-image-medium img {
+    height: 18px;  
+    width: 18px;
+}
+
+.close-image-big-ramkanone img {
+    height: 18px;  
+    width: 18px;
+}
+
+.close-image-big img {
+    height: 18px;  
+    width: 18px;
+}
+
+    .tagcommon button:hover {
+        outline: 1px solid black;
+        background-color: rgba(169,169,169,1);
+    }
+
+.add-item-common{
+    position: relative;
+    background-repeat: no-repeat;
+    display: inline-block;    
+}
+
+.add-item-small {
+    width: 67px;
+    margin: 6px 6px 46px;
+}
+
+.add-item-medium {
+    width: 167px;
+    margin: 6px 6px 46px;
+}
+
+.add-item-big {
+    width: 167px;
+    margin: 6px 6px 46px;
+}
+
+.add-item-image-common{
+    cursor: pointer;    
+}
+
+.add-item-image-small {
+    width: 35px !important;
+    height: 35px !important;
+    left: 15% !important;
+    top: 50% !important;
+}
+
+.add-item-image-medium {
+    width: 90px !important;
+    height: 90px !important;
+    left: 20% !important;
+    top: 22% !important;
+}
+
+.add-item-image-big {
+    width: 100px !important;
+    height: 100px !important;
+    left: 20% !important;
+    top: 25% !important;
+}
+
+.ui.action.input input[type="file"] {
+    display: none;
+}
+
+.custom-form {
+    width: 500px !important;
+    left: 60% !important;
+}
+
+.custom-button {
+    margin: 0px !important;
+}
+
+.custom-seg{
+    float: right;
+}
+
+.usercard {
+    text-align: left;
+    font-size: 10pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.position {
+    color: maroon;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px #00001a inset;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 2px 3px 4px black;
+}
+
+.rightpos{
+    float: right;
+    margin-left:20px;    
+}

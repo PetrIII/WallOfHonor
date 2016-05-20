@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x010083F36489329740BA9D556A9FD2111BD5" Name="WOHContentType" Group="WOFContentType" Description="Доска почета" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{167ef4eb-62e3-4924-87da-fcdc126b69d5}" DisplayName="FIO" Required="TRUE" Name="FIO" />
+      <FieldRef ID="{7243dbb4-abb8-4cc0-bda3-328d2718d639}" DisplayName="Достижение" Required="FALSE" Name="Achievement" />
+      <FieldRef ID="{9fd2f948-b864-4c5e-b792-43df263bbeb1}" DisplayName="Номинация" Required="FALSE" Name="Nomination" />
+      <FieldRef ID="{de353e74-6113-4771-8c5a-8f6c726fa32b}" DisplayName="Должность" Required="TRUE" Name="Position" />
+      <FieldRef ID="{165697a2-ec2b-4ad0-ac85-09b27f0c70b5}" DisplayName="Департамент" Required="TRUE" Name="Department" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

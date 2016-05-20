@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{165697a2-ec2b-4ad0-ac85-09b27f0c70b5}"
+       Name="UserDepart"
+       DisplayName="Департамент"
+       Type="Text"
+       Required="FALSE"
+       Group="Wall of Honor">
+  </Field>
+</Elements>
