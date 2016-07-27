@@ -1,4 +1,6 @@
-﻿var fileExtentionRange = '.png .jpg .jpeg';
+//'use strict';
+
+var fileExtentionRange = '.png .jpg .jpeg';
 var MAX_SIZE = 3; // MB
 
 $(document).ready(function() {
@@ -101,12 +103,6 @@ var setThumbAndTouch = function() {
         setAllClasses(resBorder, resImage, true);
     });
 }
-
-'use strict';
-_spBodyOnLoadFunctionNames.push("LoadSharePointJs");
-function LoadSharePointJs() {
-    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
-};
 
 var setAllClasses = function(borderType, imageType, userHavePerm) {
     if (userHavePerm) {
@@ -260,6 +256,11 @@ var deleteAllUsers = function() {
 
 var BKV = window.BKV || {};
 var itemsCollection = [];
+
+_spBodyOnLoadFunctionNames.push("LoadSharePointJs");
+function LoadSharePointJs() {
+    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
+};
 
 function sharePointReady() {
     document.getElementById("DeltaPlaceHolderSearchArea").style.padding = "0px";
